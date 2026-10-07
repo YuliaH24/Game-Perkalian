@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tantangan Matematika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tantangan Matematika! 🧮</h1>
+        <p class="instruksi">Hati-hati! Fokus pada tanda kalinya (×), awas terjebak tambah delapan (+ 8)!</p>
+        
+        <div class="score-board">
+            <span>Skor: <strong id="score">0</strong></span>
+            <span>Nyawa: <strong id="lives">3</strong> ❤️</span>
+        </div>
+
+        <div class="question-box">
+            <span id="question">Loading...</span>
+        </div>
+
+        <div class="options-container">
+            <button class="option-btn" onclick="checkAnswer(this)">-</button>
+            <button class="option-btn" onclick="checkAnswer(this)">-</button>
+            <button class="option-btn" onclick="checkAnswer(this)">-</button>
+            <button class="option-btn" onclick="checkAnswer(this)">-</button>
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+
+        <div id="game-over-screen" class="modal hidden">
+            <div class="modal-content">
+                <h2>Permainan Selesai! 🎮</h2>
+                <p>Skor Akhir Anda: <strong id="final-score">0</strong></p>
+                <button onclick="restartGame()">Main Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
